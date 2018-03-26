@@ -1,0 +1,8 @@
+realtor/*Listings/
+realtor/__pycache__/
+realtor/*.gitignore
+PMZ/
+beverly-hanks/
+homes/
+intero/
+zillow/

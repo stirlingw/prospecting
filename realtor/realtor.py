@@ -101,6 +101,7 @@ def ScrapeCities(cities):
 	SUBJECT = 'Prospecting Results'
 
 	fromaddr = 'from_email_address@gmail.com'
+	fromaddrpassword = 'from_email_password'
 	toaddr = 'to_email_address@gmail.com'
 	msg = MIMEMultipart()
 	msg['From'] = fromaddr
@@ -119,7 +120,7 @@ def ScrapeCities(cities):
 
 	server = smtplib.SMTP('smtp.gmail.com', 25)
 	server.starttls()
-	server.login('from_email_address@gmail.com', 'password')
+	server.login(fromaddr, fromaddrpassword)
 	server.sendmail(fromaddr, toaddr, msg.as_string())
 
 if __name__ == "__main__":
